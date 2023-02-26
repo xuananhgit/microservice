@@ -1,0 +1,11 @@
+sqlgetter:
+  filepath: userservice/src/main/resources/UserHandler.xml
+  id: id
+  databaseName: postgres
+  tagName: sql
+
+datasource:
+  url: jdbc:postgresql://localhost:5432/microservice
+  username: postgres
+  password: postgres
+  postgres: org.postgresql.Driver

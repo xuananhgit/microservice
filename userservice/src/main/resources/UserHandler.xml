@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sqllist>
+    <sql id="FIND_BY_USER_NAME">
+        <postgres>
+            <![CDATA[
+			    SELECT * FROM MC_USER.TB_USER WHERE USERNAME = ?
+			]]>
+        </postgres>
+    </sql>
+</sqllist>

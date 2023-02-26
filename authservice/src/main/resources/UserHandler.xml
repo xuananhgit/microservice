@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sqllist>
+    <sql id="FIND_BY_USER_NAME">
+        <postgres>
+            <![CDATA[
+			    SELECT * FROM MC_USER.TB_USER WHERE USERNAME = ?
+			]]>
+        </postgres>
+    </sql>
+
+    <sql id="FIND_BY_EMAIL">
+        <postgres>
+            <![CDATA[
+			    SELECT * FROM MC_USER.TB_USER WHERE EMAIL = ?
+			]]>
+        </postgres>
+    </sql>
+
+    <sql id="INSERT_USER">
+        <postgres>
+            <![CDATA[
+			    INSERT INTO MC_USER.TB_USER(ID, EMAIL, FIRSTNAME, LASTNAME, PASSWORD, ROLE) VALUES (?, ?, ?, ?, ?, ?)
+			]]>
+        </postgres>
+    </sql>
+
+    <sql id="GET_MAX_ID">
+        <postgres>
+            <![CDATA[
+			    SELECT MAX(ID)::NUMERIC MAX_ID FROM MC_USER.TB_USER
+			]]>
+        </postgres>
+    </sql>
+</sqllist>
